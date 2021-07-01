@@ -7,7 +7,7 @@ function allocate(str){
     const arr = obj[str];
     let curr = 0;
     const len = arr.length;
-    const isAdded = false;
+    let isAdded = false;
     for(let i=0;i<len;i++){
       if(arr[i] - curr > 1){
         arr.splice(i, 0, curr+1);
@@ -42,5 +42,16 @@ function deallocate(str){
 allocate('apibox');
 allocate('apibox');
 allocate('apibox');
+allocate('apibox');
+allocate('apibox');
+console.log(JSON.stringify(obj['apibox']));
 deallocate('apibox2');
+console.log(JSON.stringify(obj['apibox']));
+deallocate('apibox4');
+console.log(JSON.stringify(obj['apibox']));
+allocate('apibox');
+console.log(JSON.stringify(obj['apibox']));
+allocate('apibox');
+console.log(JSON.stringify(obj['apibox']));
+allocate('apibox');
 console.log(JSON.stringify(obj['apibox']));
